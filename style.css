@@ -1,0 +1,386 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: white;
+}
+
+button, input, textarea { font: inherit; }
+
+.header {
+  min-height: 75px;
+  padding: 15px 6%;
+  background: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.logo span { color: #ff9d00; }
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover { color: orange; }
+
+.cart-button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 25px;
+  background: #ff9800;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hero {
+  min-height: 520px;
+  padding: 70px 8%;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, #000e, #0004),
+    url("https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=1600")
+    center/cover;
+}
+
+.hero-content { max-width: 650px; }
+
+.tag {
+  color: #ff9800;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  margin: 20px 0;
+  line-height: 1.1;
+}
+
+.hero h1 span { color: #ff9800; }
+
+.hero p {
+  color: #ddd;
+  line-height: 1.8;
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.primary-button {
+  display: inline-block;
+  padding: 15px 24px;
+  background: #ff9800;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.primary-button:hover {
+  background: #ffc04d;
+  transform: translateY(-3px);
+}
+
+.features {
+  padding: 30px 6%;
+  background: #202020;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.features div {
+  padding: 15px;
+  font-size: 25px;
+  text-align: center;
+}
+
+.features b, .features small {
+  display: block;
+  margin-top: 8px;
+}
+
+.features b { font-size: 17px; }
+.features small { color: #aaa; font-size: 13px; }
+
+main { padding: 65px 6%; }
+
+.section-heading { text-align: center; }
+
+.section-heading h2 {
+  font-size: 35px;
+  margin: 15px 0;
+}
+
+.section-heading p { color: #aaa; }
+
+.search-box {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 16px;
+  background: #252525;
+  border: 1px solid #444;
+  border-radius: 10px;
+  color: white;
+  outline: none;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.filters button {
+  padding: 12px 18px;
+  background: #282828;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: #ff9800;
+  color: black;
+  border-color: orange;
+}
+
+.food-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.food-card {
+  background: #202020;
+  border: 1px solid #333;
+  border-radius: 14px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.food-card:hover {
+  transform: translateY(-7px);
+  border-color: orange;
+}
+
+.food-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+}
+
+.food-info { padding: 17px; }
+
+.food-info h3 {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.food-info p {
+  color: #aaa;
+  font-size: 14px;
+  min-height: 35px;
+  line-height: 1.5;
+}
+
+.price {
+  display: block;
+  margin-top: 12px;
+  color: #ff9800;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 7px;
+  background: #ff9800;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.add-btn:hover { background: #ffc04d; }
+
+.about {
+  padding: 65px 10%;
+  background: #202020;
+  text-align: center;
+}
+
+.about h2 {
+  color: orange;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.about p { color: #ccc; line-height: 1.8; }
+
+footer {
+  padding: 35px;
+  text-align: center;
+  line-height: 2;
+  background: #080808;
+}
+
+footer h2 { color: orange; }
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #000c;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #202020;
+  border-radius: 15px;
+  padding: 30px;
+  position: relative;
+}
+
+.modal h2 {
+  color: orange;
+  margin-bottom: 25px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  border: none;
+  background: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.cart-item {
+  padding: 15px 0;
+  border-bottom: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cart-item button {
+  padding: 7px 11px;
+  border: none;
+  border-radius: 5px;
+  background: orange;
+  cursor: pointer;
+}
+
+#cartTotal {
+  color: orange;
+  margin: 20px 0;
+}
+
+.full { width: 100%; text-align: center; }
+
+form label {
+  display: block;
+  margin: 15px 0 7px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 13px;
+  background: #303030;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 7px;
+  outline: none;
+}
+
+form input:focus, form textarea:focus {
+  border-color: orange;
+}
+
+form textarea {
+  height: 90px;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+#orderMessage {
+  margin-top: 15px;
+  color: #4ade80;
+  line-height: 1.7;
+}
+
+@media(max-width: 1000px) {
+  .food-list { grid-template-columns: repeat(3, 1fr); }
+  .features { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media(max-width: 700px) {
+  .header { flex-wrap: wrap; }
+  nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .food-list { grid-template-columns: repeat(2, 1fr); }
+  .food-card img { height: 160px; }
+  .hero { min-height: 430px; }
+}
+
+@media(max-width: 420px) {
+  .food-list { grid-template-columns: 1fr; }
+  .food-card img { height: 220px; }
+  .section-heading h2 { font-size: 27px; }
+}

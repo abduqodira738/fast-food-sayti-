@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAST FOOD - Online do'kon</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="header">
+  <a href="#" class="logo">🍔 FAST<span>FOOD</span></a>
+  <nav>
+    <a href="#home">Bosh sahifa</a>
+    <a href="#menu">Menyu</a>
+    <a href="#about">Biz haqimizda</a>
+  </nav>
+  <button class="cart-button" id="openCart">
+    🛒 Savatcha <span id="cartCount">0</span>
+  </button>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-content">
+    <span class="tag">MAZALI TAOMLAR MASKANI</span>
+    <h1>Ta'mi unutilmas <span>FAST FOOD!</span></h1>
+    <p>Eng mazali burgerlar, pizzalar va boshqa taomlar
+       bir joyda. Hoziroq buyurtma bering!</p>
+    <a href="#menu" class="primary-button">Menyuni ko'rish →</a>
+  </div>
+</section>
+
+<section class="features">
+  <div>🚀 <b>Tez yetkazish</b><small>Tezkor xizmat</small></div>
+  <div>🍔 <b>Yangi taomlar</b><small>Har kuni yangi</small></div>
+  <div>❤️ <b>Yuqori sifat</b><small>Mazali va sifatli</small></div>
+  <div>💰 <b>Qulay narxlar</b><small>Hamma uchun</small></div>
+</section>
+
+<main id="menu">
+  <div class="section-heading">
+    <span class="tag">BIZNING MENYU</span>
+    <h2>Sevimli taomingizni tanlang</h2>
+    <p>40 xil mazali mahsulot Sizni kutmoqda!</p>
+  </div>
+
+  <div class="search-box">
+    <input id="searchInput" type="search"
+      placeholder="🔍 Taom nomini qidiring...">
+  </div>
+
+  <div class="filters" id="filters">
+    <button class="active" data-category="all">Barchasi</button>
+    <button data-category="burger">🍔 Burger</button>
+    <button data-category="pizza">🍕 Pizza</button>
+    <button data-category="chicken">🍗 Tovuq</button>
+    <button data-category="hotdog">🌭 Hot-dog</button>
+    <button data-category="snack">🍟 Gazaklar</button>
+    <button data-category="wrap">🌯 Lavash</button>
+    <button data-category="drink">🥤 Ichimliklar</button>
+    <button data-category="dessert">🍰 Shirinliklar</button>
+  </div>
+
+  <div class="food-list" id="foodList"></div>
+</main>
+
+<section class="about" id="about">
+  <h2>FAST FOOD haqida</h2>
+  <p>Bizning maqsadimiz — Sizga mazali taomlar va
+     ajoyib xizmat ko'rsatish!</p>
+</section>
+
+<footer>
+  <h2>🍔 FASTFOOD</h2>
+  <p>Mazali taomlar — yaxshi kayfiyat!</p>
+  <p>© 2026 FAST FOOD. Barcha huquqlar himoyalangan.</p>
+</footer>
+
+<!-- SAVATCHA -->
+<div class="overlay" id="cartModal">
+  <div class="modal">
+    <button class="close" id="closeCart">×</button>
+    <h2>🛒 Savatchangiz</h2>
+    <div id="cartItems"></div>
+    <h3 id="cartTotal">Jami: 0 so'm</h3>
+    <button class="primary-button full" id="checkout">
+      Buyurtma berish
+    </button>
+  </div>
+</div>
+
+<!-- BUYURTMA -->
+<div class="overlay" id="orderModal">
+  <div class="modal">
+    <button class="close" id="closeOrder">×</button>
+    <h2>📦 Buyurtma berish</h2>
+
+    <form id="orderForm">
+      <label>Ismingiz</label>
+      <input id="customer" type="text" required
+        placeholder="Ismingizni kiriting">
+
+      <label>Telefon raqamingiz</label>
+      <input id="phone" type="tel" required
+        placeholder="+998 90 123 45 67">
+
+      <label>Yetkazib berish manzili</label>
+      <input id="address" type="text" required
+        placeholder="Manzilingiz">
+
+      <label>Buyurtma kim uchun?</label>
+      <input id="forWhom" type="text" required
+        placeholder="Masalan: O'zim uchun">
+
+      <label>Qo'shimcha izoh</label>
+      <textarea id="comment"
+        placeholder="Qo'shimcha talablaringiz..."></textarea>
+
+      <button type="submit" class="primary-button full">
+        Buyurtmani tasdiqlash
+      </button>
+    </form>
+
+    <div id="orderMessage"></div>
+  </div>
+</div>
+
+</body>
+</html>
